@@ -1,0 +1,21 @@
+
+    <!-- <ion-buttons slot="start">
+      <ion-back-button defaultHref="#"></ion-back-button>
+    </ion-buttons> -->
+    <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-back-button defaultHref="#"></ion-back-button>
+          </ion-buttons>
+          Ionic Datetime Example
+        </ion-toolbar>
+      </ion-header>
+
+<ion-content>
+  
+  <ion-datetime value="1995-04-15" min="1990-02" max="2000"
+    [dayShortNames]="customDayShortNames"
+   
+    displayFormat="DD-MMM-YY,  DDD"
+    monthShortNames="jan, feb, mar, apr, mai, jun, jul, aug, sep, okt, nov, des"></ion-datetime>
+</ion-content>

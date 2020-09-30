@@ -1,0 +1,42 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>ion-checkbox</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+</ion-content> -->
+
+
+<!-- Checkboxes in a List -->
+<!-- <ion-list>
+  <ion-item *ngFor="let entry of form">
+    <ion-label>{{entry.val}}</ion-label>
+    <ion-checkbox slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>
+  </ion-item>
+</ion-list> -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="#"></ion-back-button>
+    </ion-buttons>
+    Ionic Checkbox Example
+  </ion-toolbar>
+</ion-header>
+
+<ion-list lines="full">
+  <ion-item>
+    <ion-label><strong>Superheroes - Select All</strong></ion-label>
+    <ion-checkbox slot="start" [(ngModel)]="checkParent" [indeterminate]="indeterminateState"
+      (click)="checkCheckbox($event)"></ion-checkbox>
+  </ion-item>
+</ion-list>
+
+<ion-list>
+  <ion-item *ngFor="let checkboxes of Checkboxes">
+    <ion-label>{{checkboxes.value}}</ion-label>
+    <ion-checkbox slot="start" [(ngModel)]="checkboxes.isItemChecked" (ionChange)="verifyEvent()">
+    </ion-checkbox>
+  </ion-item>
+</ion-list>

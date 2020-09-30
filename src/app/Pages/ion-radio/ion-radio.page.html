@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="#"></ion-back-button>
+        </ion-buttons>
+    <ion-title>
+      Ionic Radio List
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <ion-list>
+    <ion-radio-group allow-empty-selection="true" name="radio-group" (ionChange)="radioGroupChange($event)" #radioGroup>
+      <ion-list-header>
+        <ion-label>Name</ion-label>
+      </ion-list-header>
+
+      <ion-item *ngFor="let item of radio_list" (ionFocus)="radioFocus()" (ionSelect)="radioSelect($event)"
+        (ionBlur)="radioBlur()">
+        <ion-label>{{item.text}}</ion-label>
+        <ion-radio slot="start" name="{{item.name}}" value="{{item.value}}" 
+          color="{{item.color}}"></ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
+  </ion-list>
+
+  <p><b>Radio Group Event</b><br />
+    {{selectedRadioGroup | json}}</p>
+ 
+
+</ion-content>

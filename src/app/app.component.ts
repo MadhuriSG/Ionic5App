@@ -13,37 +13,79 @@ export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public appPages = [
     {
-      title: 'Inbox',
-      url: '/folder/Inbox',
-      icon: 'mail'
+      title: 'Ion-Action Sheet',
+      url: 'action-sheet',
+      icon: 'star'
+    },
+  
+    {
+      title: 'Ion-Alert',
+      url: 'alert',
+      icon: 'star'
     },
     {
-      title: 'Outbox',
-      url: '/folder/Outbox',
-      icon: 'paper-plane'
+      title: 'Ion-Button',
+      url: 'button',
+     // url: '/action-sheet',
+      icon: 'star'
     },
     {
-      title: 'Favorites',
-      url: '/folder/Favorites',
-      icon: 'heart'
+      title: 'Ion-Card',
+      url: 'ion-card',
+      icon: 'star'
     },
     {
-      title: 'Archived',
-      url: '/folder/Archived',
-      icon: 'archive'
+      title: 'Ion-Checkbox',
+      url: 'ion-checkbox',
+      icon: 'star'
     },
     {
-      title: 'Trash',
-      url: '/folder/Trash',
-      icon: 'trash'
+      title: 'Ion-Datetime',
+      url: 'ion-datetime',
+      icon: 'star'
     },
     {
-      title: 'Spam',
-      url: '/folder/Spam',
-      icon: 'warning'
+      title: 'Ion-Grid',
+      url: 'ion-grid',
+      icon: 'star'
+    },
+    {
+      title: 'Ion-Modal',
+      url: 'secondpage',
+      icon: 'star'
+    },
+    {
+      title: 'Ion-Popover',
+      url: 'ion-popover',
+      icon: 'star'
+    },
+    {
+      title: 'Ion-Loading',
+      url: 'ion-loading',
+      icon: 'star'
+    },
+    {
+      title: 'Ion-Searchbar',
+      url: 'ion-serach',
+      icon: 'star'
+    },
+    {
+      title: 'Ion-Radio',
+      url: 'ion-radio',
+      icon: 'star'
+    },
+    {
+      title: 'Ion-Segment',
+      url: 'ion-segment',
+      icon: 'star'
+    },
+    {
+      title: 'Ion-Slides',
+      url: 'ion-slides',
+      icon: 'star'
     }
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+  
 
   constructor(
     private platform: Platform,

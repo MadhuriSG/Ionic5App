@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+    <ion-toolbar color="warning">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="#"></ion-back-button>
+          </ion-buttons>
+      <ion-title>
+        Multiple Ion-Sliders
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content [fullscreen]="true" class="ion-padding">
+
+
+
+      <h5>Auto Play Slider</h5>
+    
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12">
+    
+            <ion-slides pager="true" [options]="slideOptsOne" #slideWithNav
+              (ionSlideDidChange)="SlideDidChange(sliderOne,slideWithNav)">
+              <ion-slide *ngFor="let s of sliderOne.slidesItems">
+                <img src="../../assets/hotel.JPG">
+                <span class="slide-text">Slide id {{s.id}}</span>
+              </ion-slide>
+            </ion-slides>
+    
+          </ion-col>
+    
+        </ion-row>
+      </ion-grid>
+      </ion-content>
